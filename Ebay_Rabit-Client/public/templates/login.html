@@ -1,0 +1,85 @@
+<div class="container">
+	<div class="row">
+	
+	</div>
+</div>
+<br>
+<br>
+<div class="container" ng-controller="logincontroller">
+<a><img class="img-responsive center-block" src="img/logo.png" width="140" height="125" align="centre"></a>
+<div class="row">
+
+<div class="col-md-4 col-md-offset-4">
+<div class="form-body">
+    <ul class="nav nav-tabs final-login">
+        <li class="active"><a data-toggle="tab" data-target="#sectionA">Sign In</a></li>
+        <li><a data-toggle="tab" data-target="#sectionB">Join us!</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="sectionA" class="tab-pane fade in active">
+        <div class="innter-form">
+            <form class="sa-innate-form">
+            <label>Email Address</label>
+            <input type="text" ng-model="username">
+            <label>Password</label>
+            <input type="password" ng-model="password">
+            <button type="submit" ng-click="signin()">Sign In</button>
+            <a href="">Forgot Password?</a>
+ 		           <div class="col-md-12" style="margin: 10px;">
+					<div class="alert alert-danger" ng-hide="invalidlogin">
+						<strong>Invalid username or password</strong>
+					</div>
+					</div>
+            </form>
+            </div>
+            
+            <div class="clearfix"></div>
+        </div>
+        <div id="sectionB" class="tab-pane fade">
+			<div class="innter-form">
+            <form class="sa-innate-form">
+            <label>First Name</label>
+            <input type="text" ng-model="firstname">
+            <label>Last Name</label>
+            <input type="text" ng-model="lastname">
+            
+            <label>Email Address</label>
+            <input type="text" ng-model="emailid">
+            <label>Password</label>
+            <input type="password" ng-model="password">
+  
+            <label>Birthday</label>
+            <input type="date" ng-model="birthday"><br>
+  
+            <label>Ebay Handle</label>
+            <input type="text" ng-model="handle">
+            
+            <label>Contact Info</label>
+            <input type="text" ng-model="contact">
+            
+            <label>Location</label>
+            <input type="text" ng-model="location">
+  
+            <button type="submit" ng-click="register()">Join now</button>
+            <p>By clicking Join now, you agree to Ebay's User Agreement, Privacy Policy, and Cookie Policy.</p>
+            		
+            		<div class="col-md-12" style="margin: 10px;">
+					<div class="alert alert-success" ng-hide="validregistration">
+						<strong>Registration Successful</strong>
+					</div>
+					</div>
+            
+            		<div class="col-md-12" style="margin: 10px;">
+					<div class="alert alert-danger" ng-hide="invalidregistration">
+						<strong>Please Fill Out all the fields</strong>
+					</div>
+					</div>
+            </form>
+            </div>
+            
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>

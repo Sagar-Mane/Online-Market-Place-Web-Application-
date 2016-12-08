@@ -1,0 +1,37 @@
+<div ng-init="profile()">
+<h3>Bought Items</h3>
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Productname</th>
+        <th>Description</th>
+        <th>Price</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="x in bought">
+        <td>{{x.productname}}</td>
+        <td>{{x.description}}</td>
+        <td>{{x.price}}</td>
+        
+      </tr>
+      </thead>
+      </table>
+<h3>Sold Items</h3>
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Productname</th>
+        
+        
+      </tr>
+    </thead>
+    
+      <tr ng-repeat="x in sold track by $index">
+        <td>{{x}}</td>
+        
+      </tr>
+      </thead>
+      </table>
+</div>

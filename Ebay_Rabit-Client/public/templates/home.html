@@ -1,0 +1,36 @@
+<div ng-init="allproducts()">
+<div class="container">
+
+<div class="row">
+  <div class="col-sm-3" ng-repeat="x in products">
+    <div class="card card-block">
+      <h3 class="card-title">{{x.productname}}</h3>
+      <p class="card-text"><strong>Description:</strong>{{x.description}}</p>
+      <p class="card-text"><strong>Price:</strong>{{x.price}}</p>
+      <p class="card-text"><strong>Condition:</strong>{{x.condition}}</p>
+      <p class="card-text"><strong>Quantity:</strong>{{x.quantity}}</p>
+      <p class="card-text"><strong>Seller:</strong>{{x.seller}}</p>
+      <button class="btn btn-primary" ng-click="addtocart(x)">Add to Cart</button>
+    </div>
+  </div>  
+</div>
+
+<div class="row">
+  <div class="col-sm-3" ng-repeat="x in biddableproducts">
+    <div class="card card-block ">
+      <h3 class="card-title">{{x.productname}}</h3>
+      <p class="card-text"><strong>Description:</strong>{{x.description}}</p>
+      <p class="card-text"><strong>Price:</strong>{{x.price}}</p>
+      <p class="card-text"><strong>Condition:</strong>{{x.condition}}</p>
+      <p class="card-text"><strong>Quantity:</strong>{{x.quantity}}</p>
+      <p class="card-text"><strong>Seller:</strong>{{x.seller}}</p>
+      <p class="card-text"><strong>Current Bid:</strong>{{x.Bids[0].Max_bid}}</p>
+      
+        <input type="text" min={{x.Bids[0].Max_bid}} ng-model="x.bidamount" ng-bind="currentbid"> 
+      
+      <button class="btn btn-primary" ng-click="placebid(x)">Place Bid</button>
+    </div>
+  </div>  
+</div>
+</div>
+</div>

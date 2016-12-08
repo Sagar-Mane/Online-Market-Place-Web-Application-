@@ -1,0 +1,40 @@
+<div class="container" ng-init="getcart()" ng-app="home">
+
+	<h1>Shopping Cart</h1><hr>
+	
+	<table class="table table-striped table-hover table-bordered">
+        <tbody>
+            <tr>
+                <th>Item</th>
+             
+                <th>Unit Price</th>
+                <th>Remove</th>
+            </tr>
+            <tr ng-repeat="x in cart">
+                <td>{{x.productname}}</td>
+                
+                <td>${{x.price}}</td>
+                <td><span class="glyphicon glyphicon-remove" ng-click="removefromcart(x)"></span></td>
+            </tr>
+            <tr>
+                <th colspan="3"><span class="pull-right">Sub Total</span></th>
+                <th>{{total}}</th>
+            </tr>
+            <tr>
+                <th colspan="3"><span class="pull-right">VAT 20%</span></th>
+                <th>{{vat}}</th>
+            </tr>
+            <tr>
+                <th colspan="3"><span class="pull-right">Total</span></th>
+                <th>{{finaltotal}}</th>
+            </tr>
+            
+            <tr>
+                <td><button type="submit" class="btn btn-primary" ng-click="gotohome()">Continue Shopping</button></td>
+                
+                <td colspan="3"><input type="submit" class="pull-right btn btn-success" ng-click="checkout()">Checkout</td>
+            </tr>
+        </tbody>
+    </table>          
+      
+</div>

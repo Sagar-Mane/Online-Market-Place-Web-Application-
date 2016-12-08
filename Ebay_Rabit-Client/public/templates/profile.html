@@ -1,0 +1,110 @@
+<div ng-init="profile()">
+<div class="container">
+	<div class="row">
+		<div class="col-md-7 ">
+
+<div class="panel panel-default">
+  <div class="panel-heading">  <h4 >User Profile</h4></div>
+   <div class="panel-body">
+       
+    <div class="box box-info">
+        
+            <div class="box-body">
+                     <div class="col-sm-6">
+                     <div  align="center"> <img src="img/user.png" width="200" height="275" class="img-circle img-responsive"> 
+                
+                <input id="profile-image-upload" class="hidden" type="file">
+
+                     
+                     </div>
+              
+              <br>
+    
+              <!-- /input-group -->
+            </div>
+            <div class="col-sm-6">
+            <h4 style="color:#00b1b1;">{{myprofile[0].firstname}} {{myprofile[0].lastname}}</h4></span>
+            </div>
+            <div class="col-sm-6">
+            <h4  style="color:#000000;">Last Login</h4><h4>{{myprofile[0].lastlogin[0]}}</h4></span>
+            </div>
+            	
+            <div class="clearfix"></div>
+            <hr style="margin:5px 0 5px 0;">
+
+<div class="col-sm-5 col-xs-6 tital " ><strong>Ebay Handle:</strong></div><div class="col-sm-7 col-xs-6 ">{{myprofile[0].handle}}</div>
+     <div class="clearfix"></div>
+<div class="bot-border"></div>
+    
+              
+<div class="col-sm-5 col-xs-6 tital " ><strong>First Name:</strong></div><div class="col-sm-7 col-xs-6 ">{{myprofile[0].firstname}}</div>
+     <div class="clearfix"></div>
+<div class="bot-border"></div>
+
+<div class="col-sm-5 col-xs-6 tital " ><strong>Last Name:</strong></div><div class="col-sm-7"> {{myprofile[0].lastname}}</div>
+  <div class="clearfix"></div>
+<div class="bot-border"></div>
+
+<div class="col-sm-5 col-xs-6 tital " ><strong>Date Of Birth:</strong></div><div class="col-sm-7">{{myprofile[0].birthday}}</div>
+
+<div class="col-sm-5 col-xs-6 tital " ><strong>Location:</strong></div><div class="col-sm-7"> {{myprofile[0].location}}</div>
+  <div class="clearfix"></div>
+<div class="bot-border"></div>
+
+<div class="col-sm-5 col-xs-6 tital " ><strong>Contact Info:</strong></div><div class="col-sm-7"> {{myprofile[0].contact}}</div>
+  <div class="clearfix"></div>
+<div class="bot-border"></div>
+<!--<table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>UserName</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{myprofile[0].firstname}}</td>
+        <td>{{myprofile[0].lastname}}</td>
+        <td>{{myprofile[0].username}}</td>
+        
+      </tr>
+      </thead>
+      </table>
+<h1>Bought Items</h1>
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Productname</th>
+        <th>Description</th>
+        <th>Price</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="x in bought">
+        <td>{{x.productname}}</td>
+        <td>{{x.description}}</td>
+        <td>{{x.price}}</td>
+        
+      </tr>
+      </thead>
+      </table>
+<h1>Sold Items</h1>
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Productname</th>
+        
+      </tr>
+    </thead>
+    
+      <tr ng-repeat="x in sold track by $index">
+        <td>{{x}}</td>
+        
+      </tr>
+      </thead>
+      </table>
+-->
+</div>

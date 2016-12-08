@@ -1,0 +1,95 @@
+<div class="container">
+	<div class="row">
+<form class="form-horizontal">
+<fieldset>
+
+<!-- Form Name -->
+<div class="form-group">
+<legend>Sell Product</legend>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label">Product Name</label>  
+  <div class="col-sm-3">
+  <input type="text" placeholder="ProductName" class="form-control" required="" ng-model="productname">
+  </div>
+ </div>
+
+
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="company">Description</label>  
+  <div class="col-sm-3">
+  <input id="company" name="company" type="text" placeholder="Short Description" ng-model="description" class="form-control input-md" required="">
+  </div>
+</div>
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label">Price</label>  
+  <div class="col-sm-3">
+  <input id="company" type="text" placeholder="$" class="form-control input-md" required="" ng-model="price">
+    
+  </div>
+</div>
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label">Quantity</label>  
+  <div class="col-sm-3">
+  <input id="company" type="text" placeholder="#" class="form-control input-md" required="" ng-model="quantity">
+    
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Is Product Biddable</label>  
+  <div class="col-sm-3">
+  		<select class="form-control input-md" ng-model="biddableproduct">
+            <option value="0">-Select-</option>
+            <option value="yes">YES</option>
+            <option value="no">NO</option>
+        </select> 
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label">Condition</label>  
+  <div class="col-sm-3">
+ 		<select class="form-control input-md" ng-model="condition">
+            <option value="0">-Select-</option>
+            <option value="old">OLD</option>
+            <option value="new">NEW</option>
+        </select>
+    
+  </div>
+</div>
+
+
+
+<div class="form-group">
+  <label class="col-md-4 control-label"></label>
+  <div class="col-sm-3">
+    <button id="submit" class="btn btn-primary" ng-click="sellproduct()">Add Product</button>
+  </div>
+</div>
+
+			<div class="col-md-12" style="margin: 10px;">
+						<div class="alert alert-success" ng-hide="success">
+						<strong>Product Added successfully</strong>
+						</div>
+			</div>
+
+			<div class="col-md-12" style="margin: 10px;">
+						<div class="alert alert-danger" ng-hide="failed">
+						<strong>Please Fill Out All the fields</strong>
+						</div>
+			</div>
+
+</fieldset>
+</form>
+		
+	</div>
+</div>
+
